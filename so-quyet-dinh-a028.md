@@ -1,66 +1,39 @@
-# Sổ quyết định
+# Sổ quyết định — A028
 
-Ghi lại những gì đội đã chốt, và **vì sao**. Ba tuần sau không ai còn nhớ vì sao box lại vẽ
-kiểu này — người mới vào đội lại càng không.
-
-**Quyết định đã ghi thì không sửa nội dung.** Đổi ý thì ghi một quyết định mới, và chuyển
-trạng thái quyết định cũ thành *Bị thay bởi QĐ-xxx*. Nhờ vậy vẫn truy được vì sao các job
-cũ được gán theo cách cũ.
-
-> Các mục bên dưới là **ví dụ**. Mẫu trống để copy nằm cuối file.
+Ghi lại các hướng xử lý được cung cấp cho các edge case trong backlog. P-001 đến P-008 đã có hướng xử lý được ghi trong QĐ-001.
 
 ## Danh sách
 
-| Mã | Quyết định | Ngày | Xuất phát từ | Trạng thái |
-|---|---|---|---|---|
-|  |  |  |  | Hiệu lực |
-|  |  |  |  | Hiệu lực |
+| Mã                | Quyết định                             | Ngày       | Xuất phát từ                           | Trạng thái |
+| ----------------- | -------------------------------------- | ---------- | -------------------------------------- | ---------- |
+| [QĐ-001](#qđ-001) | Hướng xử lý annotation cho P-001–P-008 | 2026-11-14 | [P-001–P-008](problem-backlog-a028.md) | Hiệu lực   |
 
-**Trạng thái:** Hiệu lực · Bị thay bởi QĐ-xxx · Huỷ (ghi lý do)
+
+## Tình trạng
+
+P-001 đến P-008 đã có hướng xử lý ghi ở QĐ-001.
 
 ---
 
 ## QĐ-001
 
-**Người ngồi sau xe máy có box `nguoi` riêng**
+**Hướng xử lý annotation cho P-001–P-008**
 
-- **Ngày:** dd/mm/yyyy
-- **Người tham gia:** @thanh-vien-a (chốt), @thanh-vien-b, @thanh-vien-c, @thanh-vien-d
-- **Xuất phát từ:** [P-001](problem-backlog.md#p-001)
-- **Bối cảnh:** §3.2 của guideline nói mỗi người một box, nhưng hình minh hoạ lại vẽ chung một box.
-  Hai annotator đang làm theo hai cách khác nhau.
-- **Các phương án đã cân nhắc:**
-  1. *Gộp chung một box với xe* — nhanh hơn, nhưng mất số người trên xe, trong khi dữ liệu dùng để
-     đếm người tham gia giao thông. Loại.
-  2. *Box `nguoi` riêng cho từng người* — đúng câu chữ §3.2 và giữ được số người. **Chọn.**
-- **Quyết định:** Mỗi người trên xe máy, kể cả người ngồi sau chỉ lộ đầu, có một box `nguoi` riêng.
-  Box xe máy vẫn vẽ như bình thường.
+- **Ngày:** 2026-11-14
+- **Người tham gia:** Cả team
+- **Xuất phát từ:** [P-001–P-008](problem-backlog-a028.md)
+- **Bối cảnh:** Ghi lại các câu trả lời được cung cấp để áp dụng cho các trường hợp trong job 887 và các ảnh liên quan.
+- **Các phương án đã cân nhắc:** Không áp dụng; ghi theo hướng xử lý đã cung cấp.
+- **Quyết định:**
+  - **P-001:** Có, xe đi ngược chiều cần annotation.
+  - **P-002:** Có thể tự nội suy theo phần nhận diện được.
+  - **P-003:** Chỉ cần tự nội suy và annotation phần nhìn thấy được.
+  - **P-004:** Chỉ cần annotation phần nhìn thấy được.
+  - **P-005:** Job 887, frame 64: có thể bỏ phần cầu. Frame 67: chỉ cần đánh dấu đầy đủ phần cây nhìn thấy được.
+  - **P-006:** Job 887, frame 66: không cần annotation phần tuyết. *Terrain* là phần thảm cỏ thấp màu xanh; *Vegetation* là cây cao màu xanh.
+  - **P-007:** Job 887, frame 69: có thể xem đây là *sidewalk*. Tự nội suy theo hình ảnh nhìn thấy được.
+  - **P-008:** Không cần annotation cho vùng này nếu không có label.
 - **Việc phải làm theo:**
-  - [x] Rà lại job 101, sửa 37 ảnh đã gộp (@thanh-vien-b)
-  - [x] Báo cả đội, ghim trong kênh chat của đội
+  - [x] Áp dụng các hướng xử lý trên cho các frame tương ứng.
+
 - **Trạng thái:** Hiệu lực
-
-
----
-
-## Mẫu để copy
-
-```markdown
-## QĐ-NNN
-
-**Quyết định trong một dòng**
-
-- **Ngày:** dd/mm/yyyy
-- **Người tham gia:** @ (chốt), @, @
-- **Xuất phát từ:** [P-NNN](problem-backlog.md#p-nnn) | Họp tuần NN | …
-- **Bối cảnh:** vì sao phải quyết định
-- **Các phương án đã cân nhắc:**
-  1. *Phương án* — ưu / nhược. Loại hoặc **Chọn.**
-  2. *Phương án* — ưu / nhược. Loại hoặc **Chọn.**
-- **Quyết định:** đủ rõ để người không dự họp vẫn làm đúng
-- **Việc phải làm theo:**
-  - [ ] việc (@người phụ trách)
-- **Trạng thái:** Hiệu lực
-```
-
-Nhớ thêm một dòng vào bảng **Danh sách** ở đầu file, và đóng mục P-xxx tương ứng trong backlog.

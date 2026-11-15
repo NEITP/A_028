@@ -1,4 +1,4 @@
-# Nhật ký tuần 01 #
+# Nhật ký tuần 01 — A028
 
 **Lead tuần này:** Đinh Quốc Tiến
 **Dữ liệu / task CVAT:** Ảnh giao thông đô thị — [task 207](https://cvat.edufun.ai/tasks/207)
@@ -7,40 +7,41 @@
 
 | Thành viên | Vị trí | Phân công tuần này |
 |---|---|---|
-| ĐINH QUỐC TIẾN | Lead · Reviewer · Annotator | Chốt edge case, Job 885, Review 886  |
-| NGUYỄN ĐĂNG KHOA | Reviewer · Annotator| Job 887, Review 888 |
-| TRỊNH XUÂN TOÀN | Reviewer · Annotator | Job 888, Review 884 |
-| PHẠM VĂN HÙNG | Reviewer · Annotator | Job 886, Review 887 |
-| LÊ ĐỨC LƯỢNG | Reviewer · Annotator | Job 884, Review 885 |
+| Đinh Quốc Tiến | Lead · Reviewer · Annotator | Chốt edge case, Job 885, Review 886  |
+| Nguyễn Đăng Khoa | Reviewer · Annotator | Job 887, Review 888 |
+| Trịnh Xuân Toàn | Reviewer · Annotator | Job 888, Review 884 |
+| Phạm Văn Hùng | Reviewer · Annotator | Job 886, Review 887 |
+| Lê Đức Lượng | Reviewer · Annotator | Job 884, Review 885 |
 
 
 ## Công việc
 
-| # | Nội dung công việc | Annotator | Reviewer | Hoàn thành | Ghi chú |
-|---|---|---|---|---|---|
-| 1 | Job 884 — 20 ảnh, cùng nhãn | LÊ ĐỨC LƯỢNG | TRỊNH XUÂN TOÀN | 🟡 10% | nhầm lẫn và chưa hoàn thành phàn lớn job |
-| 2 | Job 885 — 20 ảnh, cùng nhãn | ĐINH QUỐC TIẾN | LÊ ĐỨC LƯỢNG | 🟡 80% | Một số ảnh chưa gán nhãn đủ |
-| 3 | Job 886 — 20 ảnh, cùng nhãn | PHẠM VĂN HÙNG | ĐINH QUỐC TIẾN | 🟡 90% |  |
-| 4 | Job 887 — 20 ảnh, cùng nhãn | NGUYỄN ĐĂNG KHOA | PHẠM VĂN HÙNG | 🟡 50%  | Một số ảnh vẫn chưa gán nhãn đủ S080, 79, 78, 76, 74, 73, 66, 69, 70, 62 |
-| 5 | Job 888 — 20 ảnh, cùng nhãn | TRỊNH XUÂN TOÀN | NGUYỄN ĐĂNG KHOA | 🟡 60% | Một số ảnh dùng AI mask bị lỗi S082, 83, 88, 89, 91, 92, 93, 94, 100  |
+| #   | Nội dung công việc          | Annotator        | Reviewer         | Hoàn thành | Ghi chú                     |
+| --- | --------------------------- | ---------------- | ---------------- | ---------- | --------------------------- |
+| 1   | Job 884 — 20 ảnh, cùng nhãn | LÊ ĐỨC LƯỢNG     | TRỊNH XUÂN TOÀN  | 🟡 90%     | Một số ảnh chưa gán nhãn đủ |
+| 2   | Job 885 — 20 ảnh, cùng nhãn | ĐINH QUỐC TIẾN   | LÊ ĐỨC LƯỢNG     | 🟡 90%     | Một số ảnh chưa gán nhãn đủ |
+| 3   | Job 886 — 20 ảnh, cùng nhãn | PHẠM VĂN HÙNG    | ĐINH QUỐC TIẾN   | 🟡 90%     | Một số ảnh chưa gán nhãn đủ |
+| 4   | Job 887 — 20 ảnh, cùng nhãn | NGUYỄN ĐĂNG KHOA | PHẠM VĂN HÙNG    | 🟡 90%     | Một số ảnh chưa gán nhãn đủ |
+| 5   | Job 888 — 20 ảnh, cùng nhãn | TRỊNH XUÂN TOÀN  | NGUYỄN ĐĂNG KHOA | 🟡 90%     | Một số ảnh chưa gán nhãn đủ |
 
 
 Mức hoàn thành: ✅ xong **và đã qua review** · 🟡 đang làm (ghi %) · ⛔ bị chặn (ghi lý do) · ⬜ chưa bắt đầu
 
 ## Tổng kết
 
-- Đã gán: 60 / 100 ảnh (60%)
-- Qua review lần đầu: 60% (trả lại 40 ảnh)
-- Edge case mới: 
+- Đã gán: 90 / 100 ảnh (90%)
+- Qua review lần đầu: 90% (trả lại 10 ảnh)
+- Edge case mới: 8 mục (P-001–P-008), ghi tại [problem-backlog-a028.md](../problem-backlog-a028.md).
+- Quyết định mới: [sổ quyết định A028](../so-quyet-dinh-a028.md).
 
-## Vướng mắc
+## Hướng xử lý edge case
 
-- 
-- 
-  
-
+- Các câu trả lời P-001–P-008 đã được ghi tại [QĐ-001 trong sổ quyết định A028](../so-quyet-dinh-a028.md#qđ-001), với từng trường hợp được mô tả trong [backlog](../problem-backlog-a028.md).
+- Xe đi ngược chiều cần annotation. Các trường hợp khác áp dụng theo phần nhìn thấy/nhận diện được và hướng dẫn cụ thể về Building, cây, Terrain, Vegetation, Sidewalk và vùng không có label.
+- Đường phủ tuyết không cần annotation nếu vùng đó không có label.
 ## Kế hoạch tuần 02
 
-- 
-- 
-- 
+- Tiếp tục annotation/review các job 884–888 theo phân công.
+- Rà soát mask AI lỗi tại Job 888 và ảnh thiếu nhãn tại Job 887.
+- Áp dụng các hướng xử lý P-001–P-008 và cập nhật annotation tương ứng trong các job.
+- Rà soát các frame liên quan và kiểm tra annotation đã theo QĐ-001.
